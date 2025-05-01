@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs - INST377 Assignment 2</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <h1 id="main-site-title">INST377 Assignment 2</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>Dogs!</h1>
+
+        <h2>Random Dog Pictures</h2>
+            <p id="carousel-error" class="error-message"></p>
+        <div data-simple-slider id="dog-carousel">
+            </div>
+
+        <h2>Dog Breeds</h2>
+        <div id="breed-buttons-container">
+            <p>Loading breeds...</p>
+        </div>
+            <p id="breed-error" class="error-message"></p>
+
+        <div id="breed-info-container" style="display: none;">
+            <h3 id="breed-name"></h3>
+            <p id="breed-description"></p>
+            <p><strong>Minimum Life:</strong> <span id="breed-life-min"></span> years</p>
+            <p><strong>Maximum Life:</strong> <span id="breed-life-max"></span> years</p>
+        </div>
+    </main>
+
+    <div id="audio-controls">
+        <h2>Audio Commands</h2>
+        <p>Make sure your mic is enabled to be able to use these features.</p>
+        <ul>
+            <li>Navigate to a Different Page
+                <ul><li>Say: <strong>Navigate to [page]</strong> (e.g., "Navigate to Stocks")</li></ul>
+            </li>
+            <li>Change the Page Color
+                <ul><li>Say: <strong>Change the color to [color]</strong> (e.g., "Change the color to blue")</li></ul>
+            </li>
+            <li>Say Hello Back to You!
+                 <ul><li>Say: <strong>Hello</strong></li></ul>
+            </li>
+            <li>Load a Dog Breed
+                <ul><li>Say: <strong>Load Dog Breed [breed name]</strong> (e.g., "Load Dog Breed Akita")</li></ul>
+            </li>
+        </ul>
+        <button id="start-audio" class="button-style-footer">Turn On Audio</button>
+        <button id="stop-audio" class="button-style-footer">Turn Off Audio</button>
+        <p id="audio-status" class="status-message"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
